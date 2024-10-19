@@ -1,0 +1,112 @@
+:root {
+  --main-bg-color: #14213d;
+  --main-text-color: #e5e5e5;
+  --thumbnail-border-color: #14213d;
+  --thumbnail-hover-border-color: #e5e5e5;
+  --selected-border-color: #fca311;
+  --highlight-border-color: yellow;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  text-align: center;
+  color: var(--main-text-color);
+  padding: 8px;
+}
+main {
+  max-width: 900px;
+  height: 512px;
+  margin: 16px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  gap: 8px;
+}
+h2 {
+  margin: 0 0 8px 0;
+}
+h3 {
+  font-size: 1rem;
+}
+p {
+  font-size: 0.8rem;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid var(--main-text-color);
+  border-radius: 5px;
+  padding: 8px;
+}
+#maskContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 200px;
+  margin: 0 auto;
+}
+.maskThumbnail {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid var(--thumbnail-border-color);
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+.maskThumbnail:hover {
+  border: 2px solid var(--thumbnail-hover-border-color);
+}
+.selected {
+  border: 2px solid var(--selected-border-color);
+}
+.highlight {
+  border: 2px solid var(--highlight-border-color);
+}
+canvas {
+  width: 512px;
+  height: 512px;
+  border: 1px solid var(--main-text-color);
+  border-radius: 5px;
+}
+button {
+ width: 100%;
+ height: 40px;
+ cursor: pointer;
+ font-family: 'Roboto', sans-serif;
+ background-color: var(--main-bg-color);
+ color: var(--main-text-color);
+ border: 1px solid var(--main-text-color);
+ border-radius: 5px;
+}
+button:hover {
+  border: 1px solid var(--selected-border-color);
+  background-color: var(--selected-border-color);
+  color: var(--main-bg-color);
+}
+#ioContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-end;
+}
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 0.9em;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #ccc, 0 1px 0 #fff inset;
+}
+

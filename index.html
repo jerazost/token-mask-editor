@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Manipulation Canvas with Masks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Token Ring Mask Editor</h1>
+    </header>
+    <main id="imageDropArea">
+      <div class="panel">
+        <div class="panel-content">
+          <h2>Instructions</h2>
+          <p>Drag an image into the canvas to start editing.</p>
+          <h3>Move Image</h3>
+          <p><kbd>LMB</kbd> + Move</p>
+          <h3>Move Increments</h3>
+          <p><kbd>←</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd></p>
+          <h3>Scale Image</h3>
+          <p>Scroll Wheel</p>
+          <h3>Rotate Image</h3>
+          <p><kbd>Shift</kbd> + Scroll Wheel</p>
+        </div>
+      </div>
+      <canvas id="canvas" width="512" height="512"></canvas>
+      <div class="panel">
+        <div class="panel-content">
+          <h2>Masks</h2>
+          <p>Select a mask to give an illusion of depth to the image.</p>
+          <div id="maskContainer">
+            <div
+              class="maskThumbnail"
+              data-mask="masks/top-left.png"
+              style="background-image: url('masks/top-left.png')"
+            ></div>
+            <div
+              class="maskThumbnail"
+              data-mask="masks/top.png"
+              style="background-image: url('masks/top.png')"
+            ></div>
+            <div
+              class="maskThumbnail"
+              data-mask="masks/top-right.png"
+              style="background-image: url('masks/top-right.png')"
+            ></div>
+            <div
+              class="maskThumbnail"
+              data-mask="masks/left.png"
+              style="background-image: url('masks/left.png')"
+            ></div>
+            <div
+              class="maskThumbnail"
+              data-mask="masks/circle.png"
+              style="background-image: url('masks/circle.png')"
+            ></div>
+            <div
+              class="maskThumbnail"
+              data-mask="masks/right.png"
+              style="background-image: url('masks/right.png')"
+            ></div>
+            <div
+              class="maskThumbnail"
+              data-mask="masks/bottom-left.png"
+              style="background-image: url('masks/bottom-left.png')"
+            ></div>
+            <div
+              class="maskThumbnail"
+              data-mask="masks/bottom.png"
+              style="background-image: url('masks/bottom.png')"
+            ></div>
+            <div
+              class="maskThumbnail"
+              data-mask="masks/bottom-right.png"
+              style="background-image: url('masks/bottom-right.png')"
+            ></div>
+            <!-- Add more mask thumbnails as needed -->
+          </div>
+        </div>
+        <div class="panel-content">
+          <h2>Export</h2>
+          <p>
+            Export with ring or without ring for compatibility with Foundry
+            Token Rings
+          </p>
+          <div id="ioContainer">
+            <button id="exportWithRingBtn">Export With Ring</button>
+            <button id="exportWithoutRingBtn">Export Without Ring</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="scripts/render.js"></script>
+    <script src="scripts/controls.js"></script>
+    <script src="scripts/mask.js"></script>
+    <script src="scripts/fileManager.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
